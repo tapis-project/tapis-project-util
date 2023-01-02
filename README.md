@@ -6,7 +6,7 @@ Clone the github repository to the directory of your choice and alias the `tapis
 
 ## Dependencies
 The tapis project util requires `python3`, `docker`, `kubectl`, and `minikube`.
-This dev util only makes use of the standard library in python3 and thus, does not required a virtual environment.
+This dev util only makes use of the standard library in python3 and thus, does not require you to start use virtual environment.
 
 ### docker
 [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
