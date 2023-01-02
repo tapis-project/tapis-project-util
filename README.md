@@ -1,13 +1,10 @@
 # Tapis Project Util [BETA]
-***
 A CLI tool to streamline development and deployment of Tapis services in local minikube and kubernetes envrionments.
 
 ## Installation
-***
 Clone the github repository to the directory of your choice and alias the `tapis-project-util.sh` file to the command of your choice. `t` is the preferred alias.
 
 ## Dependencies
-***
 The tapis project util requires `python3`, `docker`, `kubectl`, and `minikube`.
 This dev util only makes use of the standard library in python3 and thus, does not required a virtual environment.
 
