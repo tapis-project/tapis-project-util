@@ -4,7 +4,6 @@ from controllers.Command import Command
 
 
 class Clean(Command):
-    
     def images(*args):
         print("Removing dangling docker images")
         os.system("docker rmi $(docker images -qa -f 'dangling=true')")

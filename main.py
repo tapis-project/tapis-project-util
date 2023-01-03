@@ -1,8 +1,6 @@
 import sys
 
 from routes import routes
-from controllers.index import Index
-
 
 class Main:
     def __call__(self, args):
@@ -11,9 +9,6 @@ class Main:
         command = args[0]
 
         controller = self._get_controller(command)
-        # Insert 'index' as the command if the controller returned is Index
-        if type(controller) == Index:
-            args.insert(0, "index")
         
         action_name = args[1] if len(args) > 1 else "index"
         action_args = args[2:]
@@ -29,14 +24,11 @@ class Main:
             sys.exit(1)
 
     def _get_controller(self, command):
-        route = next(filter(lambda route: route[0] == command, routes), None)
+        Controller = next(filter(lambda route: route[0] == command, routes), None)[1]
+        if Controller == None:
+            print(f"Unrecognized command '{command}'")
+            sys.exit(1)
 
-        # Fallback to the index controller
-        if route == None:
-            route = next(filter(lambda route: route[0] == "index", routes), None)
-
-        return route[1]()
-
+        return Controller()
 
 Main()(sys.argv[1:])
-

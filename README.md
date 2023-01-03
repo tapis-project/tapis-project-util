@@ -18,7 +18,7 @@ This dev util only makes use of the standard library in python3 and thus, does n
 [https://minikube.sigs.k8s.io/docs/start/](https://minikube.sigs.k8s.io/docs/start/)
 
 ## List of commands
-- `system_start`: starts minikube with the specified number of nodes - `t system_start [number of nodes]`
+- `system_start` starts minikube with the specified number of nodes - `t system_start [number of nodes]`
 - `system_stop` stops all minikube control and worker nodes - `t system_stop`
 - `dashboard` starts the minikube dashboard - `t dashboard`
 - `up` runs the burnup script for the specified services - `t up api rabbitmq proxy`
