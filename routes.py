@@ -1,8 +1,9 @@
-from controllers import Index, Project, Clean
+from controllers import System, Service, Project, Clean
 
 
 routes = [
-    ("index", Index),
+    ("system", System),
+    ("service", Service),
     ("project", Project),
     ("clean", Clean)
 ]

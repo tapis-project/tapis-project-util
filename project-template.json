@@ -4,12 +4,5 @@
     "projectPattern": "",
     "prodImageTag": "",
     "deploymentType": "",
-    "categories": {
-        "api": [],
-        "frontend": [],
-        "broker": [],
-        "database": [],
-        "service": [],
-        "proxy": []
-    }
+    "services": []
 }
