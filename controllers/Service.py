@@ -109,6 +109,16 @@ class Service(Command):
             self._docker_build(service, prune=True)
         self._up(services)
 
+    @action()
+    def buildp(self, services):
+        for service in services:
+            if not getattr(service, "buildable", False):
+                print(f"Service {service.name} is not buildable")
+                continue
+            
+            self._docker_build(service, prune=True)
+            self._docker_push(service)
+
     def _docker_prune(self, label):
         return f"docker image prune --force --filter='label={label}'"
 
